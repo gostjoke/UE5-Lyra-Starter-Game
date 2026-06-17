@@ -67,3 +67,58 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# === UE5 自動產生的目錄 ===
+Binaries/
+DerivedDataCache/
+Intermediate/
+Build/
+Saved/
+
+# === Plugin 內的自動產生目錄（Lyra 有大量 plugins）===
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+Plugins/**/Build/
+
+# === IDE / 編輯器產生的檔案 ===
+.vs/
+.vscode/
+.idea/
+*.sln
+*.suo
+*.sdf
+*.opensdf
+*.opendb
+*.VC.db
+*.VC.opendb
+*.xcodeproj
+*.xcworkspace
+*.vcxproj*
+CMakeSettings.json
+compile_commands.json
+
+# === Rider ===
+*.DotSettings.user
+
+# === 作業系統垃圾 ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Crash dumps / 暫存 ===
+*.log
+*.pdb
+*.tmp
+*.bak
+
+# === Lyra / UE5 大型內容檔案（學習專案用,只保留代碼)===
+# 如果你要完整可開啟的專案,把下面這段註解掉
+Content/**/*.uasset
+Content/**/*.umap
+Content/**/*.ubulk
+Content/**/*.uexp
+
+# 不過保留 Config 和 .uproject 一定要追蹤
+!*.uproject
+!Config/
+!Source/
